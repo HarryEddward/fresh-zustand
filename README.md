@@ -1,1 +1,1 @@
-# fresh-zustand
+# @fres-stack/zustand
