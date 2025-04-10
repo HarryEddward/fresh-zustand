@@ -1,6 +1,9 @@
 # @fresh-stack/zustand
 ### Fuck the poor implementation of zustand
 ![JSR Version](https://img.shields.io/jsr/v/%40fresh-stack/zustand)
+![JSR Version](https://img.shields.io/badge/jsr-latest-blue?logo=deno&label=jsr)
+![Last Commit](https://img.shields.io/github/last-commit/HarryEddward/fresh-zustand)
+![GitHub Repo stars](https://img.shields.io/github/stars/HarryEddward/fresh-zustand?style=social)
 
 
 <p align="center">
