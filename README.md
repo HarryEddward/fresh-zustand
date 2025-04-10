@@ -51,7 +51,7 @@ const useProductsStoreZustand = create<StateProducts>((set) => (
 ))
 
 // Hook function (CSR)
-export function useProducts() {
+export function useProductsStore() {
     return useClientStore(useProductsStoreZustand);
 }
 ```
