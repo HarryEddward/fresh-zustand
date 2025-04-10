@@ -1,9 +1,12 @@
 # @fresh-stack/zustand
 ### Fuck the poor implementation of zustand
+![JSR Version](https://img.shields.io/jsr/v/%40fresh-stack/zustand)
+
 
 <p align="center">
     <img src=".github/img/logo.png" width="50%" alt="accessibility text">
 </p>
+
 
 Library with extra features for the Fresh full-stack framework, to implement Zustand in a more native and intuitive way for the hassle-free implementation of CSR islands.
 
@@ -69,6 +72,7 @@ export function Island({ props... }) {
 
 }
 ```
+
 
 ## Credits
 
