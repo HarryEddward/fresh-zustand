@@ -8,7 +8,7 @@
     "zustand": "npm:zustand@^5.0.3"
   },
   "name": "@fresh-stack/zustand",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Enhanced Zustand integration for Fresh, with seamless SSR/CSR support.",
   "exports": "./src/mod.ts",
   "license": "MIT",
