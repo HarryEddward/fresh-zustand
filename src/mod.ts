@@ -1,1 +1,1 @@
-import * as fresh_zustand from './hooks/useClientStore.ts';
+import * from './hooks/useClientStore.ts';
