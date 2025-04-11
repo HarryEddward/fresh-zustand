@@ -1,38 +1,30 @@
-// islands/utils/useClientStore.ts
+// src/hooks/useClientStore.ts (en tu librería)
 import { useState, useEffect } from "preact/hooks";
-import { StoreApi, UseBoundStore } from "zustand";
+import type { StoreApi, UseBoundStore } from "zustand";
 
 /**
- * Hook personalizado para usar stores de Zustand en Fresh, manejando SSR y CSR de forma transparente.
- * Devuelve el estado completo del store, seguro para usar directamente en SSR y CSR.
+ * Hook para usar stores de Zustand en Fresh, seguro para SSR y CSR.
+ * En SSR, devuelve el estado inicial del store sin hooks.
+ * En CSR, sincroniza el estado con hooks de Preact.
  *
- * @template T - El tipo del estado del store de Zustand.
- * @param store - El store de Zustand creado con `create`.
- * @returns El estado actual del store, siempre válido.
+ * @template T - Tipo del estado del store.
+ * @param store - Store de Zustand creado con `create`.
+ * @returns Estado actual del store.
  */
 export function useClientStore<T>(store: UseBoundStore<StoreApi<T>>): T {
-  // Obtenemos el estado inicial del store (seguro en SSR)
   const initialState = store.getState();
+  const isClient = typeof window !== "undefined";
 
-  // Estado local que se sincronizará con el store en CSR
+  if (!isClient) {
+    return initialState; // SSR: solo estado inicial
+  }
+
   const [state, setState] = useState<T>(initialState);
-
   useEffect(() => {
-    console.log("CARGANDO ZUSTAND");
-
-    // Sincronizamos con el store en el cliente
-    const unsubscribe = store.subscribe((newState) => {
-      console.log("Store Updated (CSR):", newState);
-      setState(newState);
-    });
-
-    // Actualizamos el estado inicial tras la hidratación
-    setState(store.getState());
-    console.log("ZUSTAND CARGADO");
-
+    const unsubscribe = store.subscribe((newState) => setState(newState));
+    setState(store.getState()); // Sincroniza tras hidratación
     return () => unsubscribe();
   }, [store]);
 
-  // Siempre devolvemos el estado (inicial en SSR, actualizado en CSR)
   return state;
 }
