@@ -1,6 +1,6 @@
 // islands/utils/useClientStore.ts
-import { useState, useEffect } from "npm:preact/hooks";
-import { StoreApi, UseBoundStore } from "npm:zustand";
+import { useState, useEffect } from "preact/hooks";
+import { StoreApi, UseBoundStore } from "zustand";
 
 /**
  * Hook personalizado para usar stores de Zustand en Fresh, manejando SSR y CSR de forma transparente.
