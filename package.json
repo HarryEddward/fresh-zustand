@@ -1,0 +1,19 @@
+{
+  "name": "fresh-zustand",
+  "version": "1.0.0",
+  "description": "![JSR Version](https://img.shields.io/jsr/v/%40fresh-stack/zustand) ![JSR Version](https://img.shields.io/badge/jsr-latest-blue?logo=deno&label=jsr) ![Last Commit](https://img.shields.io/github/last-commit/HarryEddward/fresh-zustand) ![GitHub Repo stars](https://img.shields.io/github/stars/HarryEddward/fresh-zustand?style=social)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "^10.26.5",
+    "zustand": "^5.0.3"
+  }
+}
