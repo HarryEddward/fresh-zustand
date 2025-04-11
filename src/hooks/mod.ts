@@ -1,1 +1,1 @@
-import * from './useClientStore.ts';
+export { useClientStore } from './useClientStore.ts';
