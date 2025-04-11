@@ -4,7 +4,7 @@
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
-    "preact/": "https://esm.sh/preact@10.22.0/",
+    "preact": "npm:preact@10.22.0",
     "zustand": "npm:zustand@^5.0.3"
   },
   "name": "@fresh-stack/zustand",
