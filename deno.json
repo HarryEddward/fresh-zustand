@@ -6,5 +6,14 @@
     "@std/assert": "jsr:@std/assert@1",
     "preact": "npm:preact@^10.26.5",
     "zustand": "npm:zustand@^5.0.3"
-  }
+  },
+  "name": "@fresh-stack/zustand",
+  "version": "0.1.4",
+  "description": "Enhanced Zustand integration for Fresh, with seamless SSR/CSR support.",
+  "exports": "./src/mod.ts",
+  "license": "MIT",
+  "repository": "github:HarryEddward/fresh-zustand",
+  "keywords": ["fresh", "zustand", "deno", "ssr", "csr", "state-management"],
+  "author": "Adrián Martín au7812ooae32@gmail.com",
+  "files": ["src"]
 }
